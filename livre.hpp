@@ -1,5 +1,7 @@
 #ifndef __LIVRE_HPP
 #define __LIVRE_HPP
+using namespace std;
+#include<iostream>
 
 class Livre{
 
