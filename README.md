@@ -1,9 +1,8 @@
 Projet iFBook structure :
 
-L’application devra au minimum fournir à l’utilisateur les fonctionnalités suivantes :
+L’application devrafournir à l’utilisateur les fonctionnalités suivantes :
 
-– Permettre l’ajout et la suppression de médias dans le système de gestion de la médiathèque,
-– Permettre la consultation des ressources de la médiathèque (liste des ressources ou informations
+– Permettre l’ajout et la suppression de médias dans le système de gestion de la médiathèque,– Permettre la consultation des ressources de la médiathèqueliste des ressources ou informations
 détaillées relatives à une ressource),
 – Permettre de sauvegarder et de charger le contenu de la médiathèque à partir d’un fichier,
 – Permettre de rechercher un média à partir d’une information (son titre, le nom de l’auteur, etc.
@@ -32,16 +31,8 @@ information spécifiant le nombre de pistes (ou chapitres) qu’il contient.
 Les interactions entre l’homme et la machine seront réalisées mode ligne de commandes afin de limiter
 la difficulté. Voici la liste des commandes que devra supporter votre application :
 
-– BYE : lorsque l’utilisateur lance cette commande, il demande simplement à quitter votre application.
-Dans ce cas là, vous devez tout simplement fermer proprement votre outil (dans le sens
-destruction des ressources allouées).
-– ADD type : cette commande lancera la procédure permettant de créer une nouvelle ressource en
-fonction du type spécifié en paramètre.
-– LOAD filename : cette commande doit permettre à l’utilisateur de charger un fichier un fichier
-contenant les ressources disponibles dans la médiathèque. La contenu de ce fichier viendra remplacer
-les données actuellement chargées dans l’outil.
-– SAVE filename : cette commande permet à l’utilisateur de sauvegarder les données actuellement
-dans l’outil dans le fichier dont le nom est spécifié en paramètre. Le format de sauvegarde des
+– BYE : lorsque l’utilisateur lance cette commande, il demande simplement à quitter votre application.Dans ce cas là, vous devez tout simplement fermerproprement votre outil (dans le sensdestruction des ressources allouées).– ADD type : cette commande lancera la procédure permettant de créer une nouvelle ressource enfonction du type spécifié en paramètre.– LOAD filename : cette commande doit permettre à l’utilisateur de charger un fichier un fichier
+contenant les ressources disponibles dans la médiathèque. La contenu de ce fichier viendra remplacer les données actuellement chargées dans l’outil.– SAVE filename : cette commande permet à l’utilisateur de sauvegarder les données actuellementdans l’outil dans le fichier dont le nom est spécifié en paramètre. Le format de sauvegarde des
 données est laissé à votre discrétion.
 – SEARCH chaine : cette fonction permet de rechercher dans la base de données les documents
 contenant la chaîne de caractères spécifiée en paramètre. Les résultats issus de la recherche remplaceront
