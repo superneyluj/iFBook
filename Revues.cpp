@@ -6,3 +6,4 @@ Revues::Revues(const string &iEditeur, const int &iNombre_article, const string 
 	Livre(iAuteur, iTitre, iMaison_edition, iResume, iAnnee_publication, iNombre_pages)
 	{}
 
+
