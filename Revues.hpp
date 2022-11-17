@@ -17,7 +17,7 @@ class Revues: public Livre
     // Méthodes
 
     public:
-        Revues(const string iEditeur, const int iNombre_article);
+        Revues(const string iEditeur, const int iNombre_article, const string &iAuteur, const string &iTitre, const string &iMaison_edition, const string &iResume, const int &iAnnee_publication, const int &iNombre_pages);
         virtual ~Revues ();
 
 };
