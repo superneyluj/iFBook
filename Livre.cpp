@@ -8,3 +8,5 @@ Livre::Livre(const string &iAuteur, const string &iTitre, const string &iMaison_
 		m_annee_publication(iAnnee_publication),
 		m_nombre_pages(iNombre_pages)
 		{}
+
+Livre::~Livre () {}

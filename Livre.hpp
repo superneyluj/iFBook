@@ -1,9 +1,11 @@
 #ifndef __LIVRE_HPP
 #define __LIVRE_HPP
-using namespace std;
+
 #include<iostream>
 
-class Livre{
+using namespace std;
+
+class Livre {
 
 	//attribut de la classe livre
 	string m_auteur;
@@ -16,7 +18,7 @@ class Livre{
 	//constructeur de la classe livre
 	public:
 		Livre(const string &iAuteur, const string &iTitre, const string &iMaison_edition, const string &iResume, const int &iAnnee_publication, const int &iNombre_pages);
-		
+		virtual ~Livre ();
 };
 
 #endif
