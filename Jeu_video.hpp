@@ -11,7 +11,7 @@ class Jeu_video {
 	string m_plateforme;
 	string m_public_legal;
 	string m_editeur;
-	string m_date_de_parution;
+	int m_date_de_parution;
 	string m_resume;
 
 	public:
