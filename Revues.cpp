@@ -1,4 +1,8 @@
-#include <Revues.hpp>
+#include "Revues.hpp"
 
-Revues::Revues(const string &iEditeur, const int &iNombre_article, const string &iAuteur_revue, const string &iTitre_revue, const string &iMaison_edition_revue, const string &iResume_revue, const int &iAnnee_publication_revue, const int &iNombre_pages_revue): m_editeur(iEditeur), m_nombre_article(iNombre_article), Livre(iAuteur_revue, iTitre_revue, iMaison_edition_revue, iResume_revue, iAnnee_publication_revue, iNombre_pages_revue){}
+Revues::Revues(const string &iEditeur, const int &iNombre_article, const string &iAuteur, const string &iTitre, const string &iMaison_edition, const string &iResume, const int &iAnnee_publication, const int &iNombre_pages): 
+	m_editeur(iEditeur), 
+	m_nombre_article(iNombre_article), 
+	Livre(iAuteur, iTitre, iMaison_edition, iResume, iAnnee_publication, iNombre_pages)
+	{}
 
