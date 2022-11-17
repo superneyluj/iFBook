@@ -38,3 +38,4 @@
 >- RESET : cette dernière méthode permet de supprimer toutes les ressources contenues dans la
 >bibliothèque
 
+#### Une base 
