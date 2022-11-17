@@ -33,8 +33,7 @@
 >recherche précédemment lancée.
 >- SHOW id : cette fonction doit permettre d’afficher les informations détaillées sur une ressource
 >précise contenue dans la médiathèque. Le paramètre passé lors de l’appel de la procédure utilise un
->identifiant unique que doit posséder toute ressource appartenant à la médiathèque (identifiant de
->l’objet par exemple => attribut static).
+>identifiant unique que doit posséder toute ressource appartenant à la médiathèque 
 >- DELETE id : cette méthode permet de supprimer une ressource particulière appartenant à la
 >médiathèque.
 >- RESET : cette dernière méthode permet de supprimer toutes les ressources contenues dans la
