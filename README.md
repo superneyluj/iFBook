@@ -14,6 +14,8 @@
 >- Des revues(classe héritée de la classe livre) : une revue possède les mêmes caractéristiques que les livres sauf qu’elle possède en plus un éditeur et un ainsi qu’un attribut spécifiant le nombre d’articles contenus dedans. Pour chaque revue on pourra mémoriser le nom des articles contenus afin d’autoriser leur indexation.<br>
 >- Des CD : un CD est un support musical qui possède une durée, un nombre de pistes, un auteur, une maison de production et un titre.<br>
 >- Des DVD : un DVD est un support vidéo similaire et possède en plus une information spécifiant le nombre de pistes (ou chapitres) qu’il contient.<br>
+>- Des jeux vidéos : Support vidéoludique, qui possède un titre, plateforme, public légal, éditeur, date de parution et un résumé
+>- DLC : c'est un contenu additionnel d'un jeu vidéo qui possède un le titre du jeu original,titre, plateforme, public légal, éditeur, date de parution
 
 
 #### Les interactions entre l’homme et la machine seront réalisées mode ligne de commandes afin de limiterla difficulté. Voici la liste des commandes que devra supporter votre application :
