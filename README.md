@@ -19,20 +19,13 @@
 #### Les interactions entre l’homme et la machine seront réalisées mode ligne de commandes afin de limiterla difficulté. Voici la liste des commandes que devra supporter votre application :
 
 >- BYE : lorsque l’utilisateur lance cette commande, il demande simplement à quitter votre application.Dans ce cas 
->là,vousdeveztoutsimplementfermerproprement votre outil (dans le sensdestruction des ressources allouées).
->- ADD type : cette commande lancera la procédure permettant de créer une nouvelle ressource enfonction du type spécifié en paramètre.
+>là,vous devez toutsimplement fermer proprement votre outil (dans le sens destruction des ressources allouées).
+>- ADD type : cette commande lancera la procédure permettant de créer une nouvelle ressource en fonction du type spécifié en paramètre.
 >- LOAD filename : cette commande doit permettre à l’utilisateur de charger un fichier un fichier contenant les ressources disponibles dans la médiathèque. 
->La contenu de ce fichier viendra remplacer les données actuellement chargées dans l’outil.– SAVE filename : cette commande permet à l’utilisateur de 
->sauvegarder les données actuellementdans l’outil dans le fichier dont le nom est spécifié en paramètre. Le format de sauvegarde des
->données est laissé à votre discrétion.
+>La contenu de ce fichier viendra remplacer les données actuellement chargées dans l’outil.
 >- SEARCH chaine : cette fonction permet de rechercher dans la base de données les documents
->contenant la chaîne de caractères spécifiée en paramètre. Les résultats issus de la recherche remplaceront
->temporairement la base de données courante pour faire en sorte que si l’utilisateur lance
->une seconde recherche elle ne s’appliquera que sur les résultats de la première recherche (recherche
->incrémentale).
->- CLEAR : cette commande permet de réinitialiser la base de données courante après une recherche.
->Si l’utilisateur emploie cette commande après avoir effectué une recherche alors, les résultats sont
->détruits et la future recherche s’appliquera à l’ensemble des ressources disponibles dans la médiathèque.
+>contenant la chaîne de caractères spécifiée en paramètre. 
+>- CLEAR : cette commande permet de réinitialiser la base de données.
 >- LIST : cette fonction permet d’afficher de manière compacte les données contenues dans la base de
 >données. Si une recherche a été lancée, alors cette commande ne doit afficher que les résultats de la
 >recherche précédemment lancée.
