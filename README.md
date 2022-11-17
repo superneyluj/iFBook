@@ -1,6 +1,7 @@
 Projet iFBook structure :
 
 L’application devra au minimum fournir à l’utilisateur les fonctionnalités suivantes :
+
 – Permettre l’ajout et la suppression de médias dans le système de gestion de la médiathèque,
 – Permettre la consultation des ressources de la médiathèque (liste des ressources ou informations
 détaillées relatives à une ressource),
@@ -15,7 +16,8 @@ classique. Pour cela nous allons devoir mémoriser les informations issues de di
 livres, revues, CD, DVD, VHS, etc. L’ensemble de ces différentes ressources sont décrites à l’aide d’informations
 dépendant de leur type. Une liste non exhaustive des informations relatives aux différents types
 de ressources est fourni ci-dessous :
-Des livres : un livre est écrit par un auteur et publié durant une année précise. Il est composé de
+
+- Des livres : un livre est écrit par un auteur et publié durant une année précise. Il est composé de
 N pages et appartient à une certaine collection. De plus un livre possède un titre et il peut posséder
 un résumé.
 – Des revues(classe héritée de la classe livre) : une revue possède les mêmes caractéristiques que les livres sauf qu’elle possède en plus
@@ -29,6 +31,7 @@ information spécifiant le nombre de pistes (ou chapitres) qu’il contient.
 
 Les interactions entre l’homme et la machine seront réalisées mode ligne de commandes afin de limiter
 la difficulté. Voici la liste des commandes que devra supporter votre application :
+
 – BYE : lorsque l’utilisateur lance cette commande, il demande simplement à quitter votre application.
 Dans ce cas là, vous devez tout simplement fermer proprement votre outil (dans le sens
 destruction des ressources allouées).
