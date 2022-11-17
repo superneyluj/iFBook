@@ -2,13 +2,13 @@
 
  #### L’application devrafournir à l’utilisateur les fonctionnalités suivantes:
 
-> – Permettre l’ajout et la suppression de médias dans le système de gestion de la médiathèque.
-> – Permettre la consultation des ressources de la médiathèqueliste des ressources ou informations détaillées relatives à une ressource).
-> – Permettre de sauvegarder et de charger le contenu de la médiathèque à partir d’un fichier.
-> – Permettre de rechercher un média à partir d’une information (son titre, le nom de l’auteur, etc.), ces recherches pourront être incrémentales (possibilité de faire une recherche uniquement sur les résultats de la recherche précédente).
-> – Permettre de réserver, emprunter ou rendre une ressource.
+> – Permettre l’ajout et la suppression de médias dans le système de gestion de la médiathèque. <br>
+> – Permettre la consultation des ressources de la médiathèqueliste des ressources ou informations détaillées relatives à une ressource).<br>
+> – Permettre de sauvegarder et de charger le contenu de la médiathèque à partir d’un fichier.<br>
+> – Permettre de rechercher un média à partir d’une information (son titre, le nom de l’auteur, etc.), ces recherches pourront être incrémentales possibilité de faire une recherche uniquement sur les résultats de la recherche précédente).<br>
+> – Permettre de réserver, emprunter ou rendre une ressource.<br>
 
-L’application doit permettre de mémoriser toutes les ressources disponibles dans une médiathèque<br>
+L’application doit permettre de mémoriser toutes les ressources disponibles dans une médiathèque
 classique. Pour cela nous allons devoir mémoriser les informations issues de différents types de supports :<br>
 livres, revues, CD, DVD, VHS, etc. L’ensemble de ces différentes ressources sont décrites à l’aide d’informations<br>
 dépendant de leur type. Une liste non exhaustive des informations relatives aux différents types<br>
