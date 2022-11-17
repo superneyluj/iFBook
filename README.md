@@ -23,8 +23,6 @@
 >- BYE : lorsque l’utilisateur lance cette commande, il demande simplement à quitter votre application.Dans ce cas 
 >là,vous devez toutsimplement fermer proprement votre outil (dans le sens destruction des ressources allouées).
 >- ADD type : cette commande lancera la procédure permettant de créer une nouvelle ressource en fonction du type spécifié en paramètre.
->- LOAD filename : cette commande doit permettre à l’utilisateur de charger un fichier un fichier contenant les ressources disponibles dans la médiathèque. 
->La contenu de ce fichier viendra remplacer les données actuellement chargées dans l’outil.
 >- SEARCH chaine : cette fonction permet de rechercher dans la base de données les documents
 >contenant la chaîne de caractères spécifiée en paramètre. 
 >- CLEAR : cette commande permet de réinitialiser la base de données.
