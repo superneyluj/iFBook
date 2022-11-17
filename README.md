@@ -40,3 +40,5 @@
 >bibliothèque
 
 
+#### Séance du 17 novembre
+> - Création de toutes les classes
