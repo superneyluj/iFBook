@@ -1,4 +1,4 @@
-#include "Jeu_video.hpp"
+#include "../headers/Jeu_video.hpp"
 
 Jeu_video::Jeu_video(const string &iTitre, const string &iPlateforme, const string &iPublic_legal,const string &iEditeur, const int &iDate_de_parution,const string &iResume):
 		m_titre(iTitre),
