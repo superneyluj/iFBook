@@ -1,10 +1,18 @@
 #include <iostream>
-// #include <windows.h>  
+#include <windows.h>  
 using namespace std;
 
 
+void Menu_Principal();
 
 int main(){
+
+    Menu_Principal();
+    return 0;
+
+}
+
+void Menu_Principal(){
 
     string choix;
 
@@ -18,12 +26,25 @@ int main(){
     cout << "\t -> DELETE id : cette methode permet de supprimer une ressource particuliere appartenant a la mediatheque.\n\n";
     cout << "Que voulez vous faire ?\n";
 
-    std::getline(std::cin,choix);
+    std::getline(std::cin,Choix);
 
-    if(choix != "BYE" and "ADD" and "LIST"){
-        cout << "Erreur dans la saisie";
+    if(choix=="BYE"){
+        cout << "BYE OK";
+    }
+    else if(choix == "ADD"){
+
+    }
+    else if (choix == "SEARCH"){
+
+    }
+    else if(choix == "CLEAR"){
+
+    }
+    else if(choix == "LIST"){
+
+    }
+    else if(choix == "DELETE"){
+
     }
 
-	return 0;
 }
-
