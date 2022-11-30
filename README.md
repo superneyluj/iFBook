@@ -40,3 +40,9 @@
 
 #### Séance du 17 novembre
 > - Création de toutes les classes
+
+#### Séance du 28 novembre
+> - Création de la fonction de lecture en ligne de commande
+
+#### Séance du 30 novembre
+> - Création de la base de données mysql 
