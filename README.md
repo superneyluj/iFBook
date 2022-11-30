@@ -52,10 +52,11 @@
 > <li>Répértoires bibliothèques :</li>
 > <ul> 
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\lib</li>
+> </ul>
+> <ul>
 > <li>Répértoires d'inclusion : </li> 
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include\mysql</li>
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include</li>
 > <li>Linker : -lmysql</li>
-> </ul>
 > </ul>
 > </ul>
