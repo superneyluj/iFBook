@@ -48,6 +48,7 @@
 > <ul>
 > <li>Création de la base de données mysql</li>
 > <li><em><strong>lib à charger dans dev c++ </strong></em></li>
+> <ul>
 > <li>Répértoires bibliothèques :</li>
 > <ul> 
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\lib</li>
@@ -55,5 +56,6 @@
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include\mysql</li>
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include</li>
 > <li>Linker : -lmysql</li>
+> </ul>
 > </ul>
 > </ul>
