@@ -56,8 +56,10 @@
 > </ul>
 > <ul>
 > <li>Répértoires d'inclusion : </li> 
+> <ul>
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include\mysql</li>
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include</li>
+> </ul>
 > <li>Linker : -lmysql</li>
 > </ul>
 > </ul>
