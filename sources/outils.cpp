@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "../headers/outils.hpp"
 
 using namespace std;
 
@@ -33,15 +34,15 @@ vector<string> split(string str, char del){
 	return resultVector;
 }
 
-int main() {
 
-    string str = ""; // string to be split
-    cout << "> ";
-    std::getline(cin,str);
-	char del = ' '; // delimiter around which string is to be split
-	//cout << tab[1] << endl;
-	
-	vector<string> res = split(str, del);
+void clear(){
+	system("clear");
+}
+
+
+int main() {
 
 	return 0;
 }
+
+
