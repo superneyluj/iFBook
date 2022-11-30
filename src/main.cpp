@@ -27,13 +27,18 @@ int main(int argc, char** argv) {
 
 void loadingDatabase(){
 	MYSQL* obj;
+
+    char * livre_bdd = "CREATE TABLE Jeu_video(m_titre varchar(255), m_plateforme varchar(255), m_public_legal varchar(255), m_editeur varchar(255), m_date_de_parution int, m_resume varchar(255)); ";
+    char * cd_bdd = "CREATE TABLE CD(m_duree int, m_auteur varchar(255), m_maison_de_production varchar(255), m_titre varchar(255)); ";
+    char * dlc_bdd = "CREATE TABLE Dlc(m_jeu_original varchar(255)); ";
+    char * revues_bdd = "CREATE TABLE Revues(m_editeur varchar(255),m_nombre_article int); ";
 	
 	bool ProgramIsOpened = true;
 	
 	//connection au serveur mysql
 	
 	if(!(obj=mysql_init(0))){
-		cout << "l'objet mysql n'a pas été crée";
+		cout << "l'objet mysql n'a pas ete cree";
 	}
 	else{
 		if(!mysql_real_connect(obj,HOST,USER,PASS,"iFbook",3306,NULL,0)){
@@ -41,7 +46,11 @@ void loadingDatabase(){
 			cout << mysql_error(obj);
 		}
 		else{
-			cout << "bdd chargee\n";
+			mysql_query(obj,livre_bdd);
+			mysql_query(obj,cd_bdd);
+			mysql_query(obj,dlc_bdd);
+			mysql_query(obj,revues_bdd);
+			cout << "bdd chargee\n";    
 		}		
 	}	
 }
