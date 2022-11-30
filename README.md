@@ -53,6 +53,7 @@
 > <ul> 
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\lib</li>
 > </ul>
+> </ul>
 > <ul>
 > <li>Répértoires d'inclusion : </li> 
 > <li>C:\Program Files\MySQL\MySQL Server 8.0\include\mysql</li>
