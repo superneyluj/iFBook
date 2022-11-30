@@ -21,7 +21,6 @@ class CD
     public:
         CD(const int &iDuree, const int &iNombre_de_pistes, const string &iAuteur, const string &iMaison_de_production, const string &iTitre);
         
-
 };
 
 
