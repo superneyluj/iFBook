@@ -46,7 +46,9 @@
 
 #### Séance du 30 novembre
 > - Création de la base de données mysql 
-> - lib à charger dans dev c++ : 
->> <p>Répértoires bibliothèques : C:\Program Files\MySQL\MySQL Server 8.0\lib<br>
->><p>Répértoires d'inclusion : C:\Program Files\MySQL\MySQL Server 8.0\include\mysql & C:\Program Files\MySQL\MySQL Server 8.0\include<br>
->> <p>Linker : -lmysql<br>
+> - <em><strong>lib à charger dans dev c++ </strong></em> : 
+>> - Répértoires bibliothèques : 
+>>> - C:\Program Files\MySQL\MySQL Server 8.0\lib<br>
+>>> - Répértoires d'inclusion : C:\Program Files\MySQL\MySQL Server 8.0\include\mysql
+>>> - C:\Program Files\MySQL\MySQL Server 8.0\include<br>
+>> - Linker : -lmysql
