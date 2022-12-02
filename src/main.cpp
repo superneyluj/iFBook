@@ -13,6 +13,7 @@ using namespace std;
 
 void mainMenu();
 void creatingDatabase();
+int callback(void *NotUsed, int argc, char **argv, char **azColName);
 
 int main() {
 
@@ -26,6 +27,7 @@ void creatingDatabase(){
 	sqlite3 *db;
 	char *zErrMsg = 0;
 	int rc;
+	string sql;
 
    rc = sqlite3_open("iFBook.db", &db);
 
@@ -34,6 +36,19 @@ void creatingDatabase(){
    } else {
       fprintf(stderr, "Opened database successfully\n");
    }
+
+   sql = 	"create table Livre(" \
+   			"id int primary key ," \
+   			"m_auteur text," \
+   			"m_titre text," \
+   			"m_maison_edition text,"\
+   			"m_resume text,"\
+   			"m_anne_publication text,"\
+   			"m_nombre_pages text);";
+
+   	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+
+
 }
 
 void mainMenu(){
@@ -70,4 +85,12 @@ void mainMenu(){
     else if(choice == "DELETE"){
 
     }
+}
+
+// Create a callback function  
+int callback(void *NotUsed, int argc, char **argv, char **azColName){
+
+
+    // Return successful
+    return 0;
 }
