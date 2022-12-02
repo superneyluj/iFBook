@@ -10,13 +10,15 @@
 
 using namespace std;
 
-const char* dbFile = ".\iFBook.db";
+const char* dbFile = "./iFBook.db";
 
 void mainMenu();
 void creatingDatabase();
 int callback(void *NotUsed, int argc, char **argv, char **azColName);
 
 int main() {
+
+	CppSQLite3DB db;
 
 	creatingDatabase();
 	db.open(dbFile);
