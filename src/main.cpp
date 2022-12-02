@@ -48,6 +48,19 @@ void creatingDatabase(){
 
    	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
+   	sql = 	"create table Revues(" \
+   			"id int primary key ," \
+   			"m_auteur text," \
+   			"m_titre text," \
+   			"m_maison_edition text,"\
+   			"m_resume text,"\
+   			"m_anne_publication text,"\
+   			"m_nombre_pages text,"\
+   			"m_editeur text,"\
+   			"m_nombre_article);";
+
+   	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+
 
 }
 
