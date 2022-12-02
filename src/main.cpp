@@ -1,6 +1,5 @@
 #include <iostream>
 #include "sqlite3.h"
-#include "CppSQLite3.h"
 
 #include "../include/CD.hpp"
 #include "../include/Dlc.hpp"
@@ -18,11 +17,15 @@ int callback(void *NotUsed, int argc, char **argv, char **azColName);
 
 int main() {
 
-	CppSQLite3DB db;
-
 	creatingDatabase();
-	db.open(dbFile);
-	cout << db.execScalar("select * from Livre,Revues,Jeu_video,CD,DLC;");
+	sqlite3 *db;
+	string query;
+	char *zErrMsg = 0;
+
+	query = "select * from Livre;";
+
+	sqlite3_open("iFBook.db", &db);
+	sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
 	//mainMenu();
 	
 	return 0;
@@ -102,6 +105,8 @@ void creatingDatabase(){
 
 	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
+	sqlite3_close(db);
+
 }
 
 void mainMenu(){
@@ -140,10 +145,16 @@ void mainMenu(){
     }
 }
 
-// Create a callback function  
-int callback(void *NotUsed, int argc, char **argv, char **azColName){
+int callback(void *NotUsed, int argc, char **argv, char **azColName) {
+    
+    NotUsed = 0;
+    
+    for (int i = 0; i < argc; i++) {
 
-
-    // Return successful
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    }
+    
+    printf("\n");
+    
     return 0;
 }
