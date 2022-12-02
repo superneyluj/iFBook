@@ -1,5 +1,6 @@
 #include <iostream>
 #include "sqlite3.h"
+#include "CppSQLite3.h"
 
 #include "../include/CD.hpp"
 #include "../include/Dlc.hpp"
@@ -9,7 +10,7 @@
 
 using namespace std;
 
-
+const char* dbFile = ".\iFBook.db";
 
 void mainMenu();
 void creatingDatabase();
@@ -18,6 +19,8 @@ int callback(void *NotUsed, int argc, char **argv, char **azColName);
 int main() {
 
 	creatingDatabase();
+	db.open(dbFile);
+	cout << db.execScalar("select * from Livre,Revues,Jeu_video,CD,DLC;");
 	//mainMenu();
 	
 	return 0;
@@ -103,7 +106,7 @@ void mainMenu(){
 
     string choice;
 
-    cout << "\t\t////////////////////////////// iFBook \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\n";
+    cout << "\n\n\n\t\t////////////////////////////// iFBook \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\n";
     cout << "Rappel des commandes :\n";
     cout << "\t -> BYE : quitter le programme \n";
     cout << "\t -> ADD type : lancer la procedure permettant de creer une nouvelle ressource en fonction du type specifie en parametre. \n";
