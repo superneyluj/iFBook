@@ -18,7 +18,7 @@ int callback(void *NotUsed, int argc, char **argv, char **azColName);
 int main() {
 
 	creatingDatabase();
-	mainMenu();
+	//mainMenu();
 	
 	return 0;
 }
@@ -46,6 +46,7 @@ void creatingDatabase(){
    			"m_anne_publication text,"\
    			"m_nombre_pages text);";
 
+   	
    	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
    	sql = 	"create table Revues(" \
@@ -59,8 +60,42 @@ void creatingDatabase(){
    			"m_editeur text,"\
    			"m_nombre_article);";
 
+   	
    	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
+   	sql = 	"create table Jeu_video(" \
+   			"id int primary key ," \
+   			"m_titre text," \
+   			"m_plateforme text,"\
+   			"m_public_legal text,"\
+   			"m_editeur text,"\
+   			"m_date_de_parution text,"\
+   			"m_resume text);";
+   			
+   	
+   	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+	
+   	sql = 	"create table CD(" \
+   			"id int primary key ," \
+   			"m_duree text," \
+   			"m_nombre_de_pistes text,"\
+   			"m_auteur text,"\
+   			"m_maison_de_production text,"\
+   			"m_titre text);";
+
+	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+
+   	sql = 	"create table DLC(" \
+   			"id int primary key ," \
+   			"m_titre text," \
+   			"m_plateforme text,"\
+   			"m_public_legal text,"\
+   			"m_editeur text,"\
+   			"m_date_de_parution text,"\
+			"m_resume text,"\
+			"m_jeu_original);";
+
+	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
 }
 
