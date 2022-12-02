@@ -45,4 +45,21 @@
 > - Création de la fonction de lecture en ligne de commande
 
 #### Séance du 30 novembre
-> - Création de la base de données mysql 
+> <ul>
+> <li>Création de la base de données mysql</li>
+> <li><em><strong>lib à charger dans dev c++ </strong></em></li>
+> <ul>
+> <li>Répértoires bibliothèques :</li>
+> <ul> 
+> <li>C:\Program Files\MySQL\MySQL Server 8.0\lib</li>
+> </ul>
+> </ul>
+> <ul>
+> <li>Répértoires d'inclusion : </li> 
+> <ul>
+> <li>C:\Program Files\MySQL\MySQL Server 8.0\include\mysql</li>
+> <li>C:\Program Files\MySQL\MySQL Server 8.0\include</li>
+> </ul>
+> <li>Linker : -lmysql</li>
+> </ul>
+> </ul>
