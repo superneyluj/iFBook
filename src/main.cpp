@@ -22,7 +22,7 @@ int main() {
 	string query;
 	char *zErrMsg = 0;
 
-	query = "select * from Livre;";
+	query = "select m_titre,m_titre from Livre,Jeu_video;";
 
 	sqlite3_open("iFBook.db", &db);
 	sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
@@ -148,9 +148,10 @@ void mainMenu(){
 int callback(void *NotUsed, int argc, char **argv, char **azColName) {
     
     NotUsed = 0;
+
+	printf("\n");
     
     for (int i = 0; i < argc; i++) {
-
         printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
     }
     
