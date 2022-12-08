@@ -22,7 +22,7 @@ int main() {
 	string query;
 	char *zErrMsg = 0;
 
-	query = "select m_titre,m_titre from Livre,Jeu_video;";
+	query = "select m_titre_livre,m_titre_jeu_video from Livre, Jeu_video;";
 
 	sqlite3_open("iFBook.db", &db);
 	sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
@@ -48,7 +48,7 @@ void creatingDatabase(){
    sql = 	"create table Livre(" \
    			"id int primary key ," \
    			"m_auteur text," \
-   			"m_titre text," \
+   			"m_titre_livre text," \
    			"m_maison_edition text,"\
    			"m_resume text,"\
    			"m_anne_publication text,"\
@@ -73,7 +73,7 @@ void creatingDatabase(){
 
    	sql = 	"create table Jeu_video(" \
    			"id int primary key ," \
-   			"m_titre text," \
+   			"m_titre_jeu_video text," \
    			"m_plateforme text,"\
    			"m_public_legal text,"\
    			"m_editeur text,"\
