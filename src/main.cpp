@@ -13,6 +13,8 @@ const char* dbFile = "./iFBook.db";
 
 void mainMenu();
 void creatingDatabase();
+void rechercheMenu();
+void effacementBdd();
 int callback(void *NotUsed, int argc, char **argv, char **azColName);
 
 int main() {
@@ -22,11 +24,11 @@ int main() {
 	string query;
 	char *zErrMsg = 0;
 
-	query = "select m_titre_livre,m_titre_jeu_video from Livre, Jeu_video;";
+	//query = "select m_titre_livre,m_titre_jeu_video from Livre, Jeu_video;";
 
 	sqlite3_open("iFBook.db", &db);
 	sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
-	//mainMenu();
+	mainMenu();
 	
 	return 0;
 }
@@ -60,12 +62,11 @@ void creatingDatabase(){
    	sql = 	"create table Revues(" \
    			"id int primary key ," \
    			"m_auteur text," \
-   			"m_titre text," \
+   			"m_titre_revues text," \
    			"m_maison_edition text,"\
    			"m_resume text,"\
    			"m_anne_publication text,"\
    			"m_nombre_pages text,"\
-   			"m_editeur text,"\
    			"m_nombre_article);";
 
    	
@@ -89,13 +90,13 @@ void creatingDatabase(){
    			"m_nombre_de_pistes text,"\
    			"m_auteur text,"\
    			"m_maison_de_production text,"\
-   			"m_titre text);";
+   			"m_titre_cd text);";
 
 	sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
 
    	sql = 	"create table DLC(" \
    			"id int primary key ," \
-   			"m_titre text," \
+   			"m_titre_dlc text," \
    			"m_plateforme text,"\
    			"m_public_legal text,"\
    			"m_editeur text,"\
@@ -112,6 +113,9 @@ void creatingDatabase(){
 void mainMenu(){
 
     string choice;
+	string nom_recherche;
+
+	system("cls");
 
     cout << "\n\n\n\t\t////////////////////////////// iFBook \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\n";
     cout << "Rappel des commandes :\n";
@@ -132,10 +136,11 @@ void mainMenu(){
 
     }
     else if (choice == "SEARCH"){
-
+		rechercheMenu();
     }
     else if(choice == "CLEAR"){
-
+		system("cls");
+		effacementBdd();
     }
     else if(choice == "LIST"){
 
@@ -158,4 +163,57 @@ int callback(void *NotUsed, int argc, char **argv, char **azColName) {
     printf("\n");
     
     return 0;
+}
+
+void rechercheMenu(){
+
+	string recherche;
+	string query;
+	string lowerquery;
+	sqlite3 *db;
+	char *zErrMsg = 0;
+
+	system("cls");
+
+
+	cout << "Quelle est votre recherche ? :\n";
+	std::getline(std::cin,recherche);
+	query = "SELECT * FROM Livre, Jeu_video,CD, DLC,Revues WHERE m_titre_livre =" + recherche + " OR m_titre_jeu_video = " + recherche + " OR m_titre_jeu_cd = " + recherche + " OR m_titre_dlc = " + recherche + " OR m_titre_reveues = " + recherche +";" ;
+	for(char &ch : query){
+        ch = std::tolower(ch);
+    }
+	sqlite3_open("iFBook.db", &db);
+	sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+}
+
+void effacementBdd(){
+	sqlite3 *db;
+
+	string buffer;
+	string choix;
+	string query;
+	char *zErrMsg = 0;
+
+	cout << "Etes vous sur de vouloir effacer la base de donnes ? y/n\n";
+	std::getline(std::cin,choix);
+	if(choix == "y"){
+		system("cls");
+		sqlite3_open("iFBook.db", &db);
+		query = "DELETE FROM Livre, Jeu_video,CD, DLC,Revues;";
+		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+		sqlite3_close(db);
+		cout << "Base de donnees effacee, appuyer sur Entree touche pour revenir au menu precedent";
+		std::getline(std::cin,buffer);
+		mainMenu();
+	}
+	else if(choix == "n"){
+		cout << "Appuyez sur Entree pour revenir au menu precedent\n";
+		std::getline(std::cin,buffer);
+		mainMenu();
+	}
+	else{
+		cout << "Choix invalide \n";
+		effacementBdd();
+	}
+
 }

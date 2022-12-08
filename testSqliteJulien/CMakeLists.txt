@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(testSqlite)
-
+C:\Users\superneiluj\OneDrive\Bureau\projet_poo\iFBook\src\main.cpp
+C:\Users\superneiluj\OneDrive\Bureau\projet_poo\iFBook\src\CppSQLite3.cpp
+C:\Users\superneiluj\OneDrive\Bureau\projet_poo\iFBook\src\Livre.cpp
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 17)
 
