@@ -197,13 +197,26 @@ void effacementBdd(){
 	cout << "Etes vous sur de vouloir effacer la base de donnes ? y/n\n";
 	std::getline(std::cin,choix);
 	if(choix == "y"){
+		
 		system("cls");
 		sqlite3_open("iFBook.db", &db);
-		query = "DELETE FROM Livre, Jeu_video,CD, DLC,Revues;";
+
+		query = "DELETE FROM Livre;";
 		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+		query = "DELETE FROM Jeu_video;";
+		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+		query = "DELETE FROM CD;";
+		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+		query = "DELETE FROM DLC;";
+		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+		query = "DELETE FROM Revues;";
+		sqlite3_exec(db, query.c_str(), callback, 0, &zErrMsg);
+
 		sqlite3_close(db);
+
 		cout << "Base de donnees effacee, appuyer sur Entree touche pour revenir au menu precedent";
 		std::getline(std::cin,buffer);
+
 		mainMenu();
 	}
 	else if(choix == "n"){
